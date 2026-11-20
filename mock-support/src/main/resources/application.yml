@@ -1,0 +1,37 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: mock-services
+
+---
+spring:
+  config:
+    activate:
+      on-profile: auth
+server:
+  port: 8081
+service:
+  name: Auth Service (Port 8081)
+
+---
+spring:
+  config:
+    activate:
+      on-profile: product
+server:
+  port: 8082
+service:
+  name: Product Service (Port 8082)
+
+---
+spring:
+  config:
+    activate:
+      on-profile: order
+server:
+  port: 8083
+service:
+  name: Order Service (Port 8083)
+
